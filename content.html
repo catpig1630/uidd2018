@@ -1,0 +1,605 @@
+<!DOCTYPE html> <!-- tell browser how to interpret this document -->
+<html> <!-- other tags should be inside this -->
+    <head> <!-- meta (non-content) data goes here-->
+        <meta charset="utf-8">
+        <title>麻豆水崛頭遺址</title>
+        <style>
+            html {
+                height: 100%;
+            }
+
+            body {
+                background-image: url(background.png);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+            
+            #Tainan {
+                width:305px;
+                height:70px;
+                
+                margin:0 auto;
+                margin-top: -20px;
+            }
+
+            #mado {
+                width:480px;
+                height:80px;
+                
+                margin:0 auto;
+            }
+
+            #legend {
+                width:300px;
+                height:78px; 
+                
+
+                margin:0 auto;
+                margin-top: 10px;
+            }
+            
+            
+
+            #next {
+                display:;
+                position:absolute;
+                left:80%;
+                top: 600px;
+            }
+            
+            #back {
+                position:absolute;
+                left:75%;
+                top: 600px;
+                display:none;
+            }
+            
+            #homepage {
+                display:;
+                position:absolute;
+                left:70%;
+                top:600px;
+            }
+
+            #pic1_burned {
+                display:;
+                z-index:1;    
+                
+            }
+
+            #pic5_burned {
+                margin-top:-15px;  
+                z-index:1;
+                display:none;
+
+                
+                
+            }
+
+            #text1 {
+                display:;
+                width:490px;
+                height:240px;
+                position:absolute;
+                left:35%;
+                top: 270px;
+                
+                z-index:2;
+            }
+
+            #text2 {
+                position:absolute;
+                left:30%;
+                top: 270px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #pic2 {
+                position:absolute;
+                left:66%;
+                top: 285px;
+                display: none;
+                
+                z-index:2;
+            }
+
+            #text3 {
+                position:absolute;
+                left:30%;
+                top: 245px;
+                display: none;
+                
+                z-index:2;
+            }
+
+            #pic3 {
+                position:absolute;
+                left:66%;
+                top: 290px;
+                display: none;
+                
+                z-index:2;
+            }
+
+            #text4 {
+                position:absolute;
+                left:30%;
+                top: 270px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #pic4 {
+                position:absolute;
+                left:66%;
+                top: 285px;
+                display: none;
+                
+                z-index:2;
+            }
+
+            #text5_1 {
+                position:absolute;
+                left:50%;
+                top: 270px;
+                display:none;
+                
+                z-index:2;
+            }
+            
+            #text5_2 {
+                position:absolute;
+                left:38%;
+                top: 350px;
+                display:none;
+                
+                z-index:2;
+            }
+            
+            #text5_3 {
+                position:absolute;
+                left:23%;
+                top: 350px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #pic5_1 {
+                position:absolute;
+                left:65%;
+                top: 285px;
+                display:none;
+                
+                z-index:2;
+            }
+            
+            #pic5_2 {
+                position:absolute;
+                left:38%;
+                top: 395px;
+                display:none;
+                
+                z-index:2;
+            }
+           
+            #pic5_3 {
+                position:absolute;
+                left:24%;
+                top: 395px;
+                display:none;
+                
+                z-index:2;
+            }            
+            
+            #gamefinal_text1 {
+                position:absolute;
+                left:50%;
+                top: 300px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #gamefinal_text2 {
+                position:absolute;
+                left:23%;
+                top: 340px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #gamefinal_text3 {
+                position:absolute;
+                left:23%;
+                top: 400px;
+                display:none;
+                
+                z-index:2;
+            }
+
+
+            #gamefinal_pic1 {
+                position:absolute;
+                left:66%;
+                top: 295px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #end_text1 {
+                position:absolute;
+                left:20%;
+                top: 270px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #gameover_text1 {
+                position:absolute;
+                left:54%;
+                top: 310px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #gameover_text2 {
+                position:absolute;
+                left:17%;
+                top: 320px;
+                display:none;
+                
+                z-index:2;
+            }
+
+            #gameover_text3 {
+                position:absolute;
+                left:23%;
+                top: 410px;
+                display:none;
+                
+                z-index:2;
+            }
+
+
+            #gameover_pic1 {
+                position:absolute;
+                left:66%;
+                top: 295px;
+                display:none;
+                
+                z-index:2;
+            }
+
+        </style>
+    </head>
+    <body > <!-- content goes here-->
+        
+
+        <div id="Tainan">
+            <img src="Tainan.png" style="display:block;" />
+        </div>
+        
+        <div id="mado">
+            <img src="mado.png" style="display:block;" />
+        </div>
+
+        <div id="legend">
+            <img src="legend.png" style="display:block;" />
+        </div>
+
+        
+
+        <div id="next">
+            <img src="next.png"  width="50px" height="50px" 
+            style="display:block; margin:0 auto;" 
+            onclick="NextPage()" />
+        </div>
+
+        <div id="back">
+            <img src="back.png"  width="50px" height="50px" 
+            style="display:block; margin:0 auto;" 
+            onclick="BackPage()"/>
+        </div>
+
+        <input id = "homepage" type="image" src="homepage.png" width="50px" height="50px" 
+        onclick="location.href='active.html'">
+        
+        <div id="pic1_burned">
+            <img src="pic1_burned.png" style="display:block; margin:0 auto; " />
+        </div>
+
+        <div id="pic5_burned">
+            <img src="pic5_burned.png" style="display:block; margin:0 auto; " />
+        </div>
+        
+        <!-- *****************reel ***************************-->
+        <div id="text1">
+            <img src="reel/text1.png" />
+        </div>
+        <div id="text2">
+            <img src="reel/text2.png" />
+        </div>
+        <div id="pic2">
+            <img src="reel/pic2.png" />
+        </div>
+        <div id="text3">
+            <img src="reel/text3.png" />
+        </div>
+        <div id="pic3">
+            <img src="reel/pic3.png" />
+        </div>
+        <div id="text4">
+            <img src="reel/text4.png" />
+        </div>
+        <div id="pic4">
+            <img src="reel/pic4.png" />
+        </div>
+
+        <div id="text5_1">
+            <img src="reel/text5_1.png" />
+        </div>
+        <div id="text5_2">
+            <img src="reel/text5_2.png" 
+            onmouseover="pic5_2show()"
+            onmouseout="pic5_2disa()"
+            onclick="gamefinal();"/>
+        </div>
+
+        <div id="text5_3">
+            <img src="reel/text5_3.png" 
+            onmouseover="pic5_3show()"
+            onmouseout="pic5_3disa()"
+            onclick="gameover();"/>
+        </div>
+
+        <div id="pic5_1">
+            <img src="reel/pic5_1.png" />
+        </div>
+
+        <div id="pic5_2">
+            <img src="reel/pic5_2.png" />
+        </div>
+
+        <div id="pic5_3">
+            <img src="reel/pic5_3.png" />
+        </div>
+
+        <div id="gamefinal_text1">
+            <img src="reel/gamefinal_text1.png" />
+        </div>
+
+        <div id="gamefinal_text2">
+            <img src="reel/gamefinal_text2.png" />
+        </div>
+
+        <div id="gamefinal_text3">
+            <img src="reel/gamefinal_text3.png" 
+            onclick="end();"/>
+        </div>
+
+        <div id="gamefinal_pic1">
+            <img src="reel/gamefinal_pic1.png" width="160px" height="170px"/>
+        </div>
+
+        <div id="end_text1">
+            <img src="reel/end_text1.png" />
+        </div>
+
+        <div id="gameover_text1">
+            <img src="reel/gameover_text1.png" />
+        </div>
+
+        <div id="gameover_text2">
+            <img src="reel/gameover_text2.png" />
+        </div>
+
+        <div id="gameover_text3">
+            <img src="reel/gameover_text3.png"
+            onclick="tryagain();"/>
+        </div>
+
+        <div id="gameover_pic1">
+            <img src="reel/gameover_pic1.png" width="180px" height="190px"/>
+        </div>
+        <!-- JavaScript  -->
+        <script>
+            
+            var count=1;
+            function ChangeBack(count)
+            {
+                if(count>4){
+                    document.getElementById('pic5_burned').style.display='block';
+                    pic1_burned.style.display="none";
+                }
+                else{
+                    document.getElementById('pic1_burned').style.display='block';
+                    pic5_burned.style.display="none";
+                }
+            }
+            function ChangePage(count)
+            {
+                switch(count)
+                {
+                    case 2:
+                        text1.style.display="none";
+                        text3.style.display="none";
+                        pic3.style.display="none";
+                        text4.style.display="none";
+                        pic4.style.display="none";
+                        text5_1.style.display="none";
+                        text5_2.style.display="none";
+                        text5_3.style.display="none";
+                        pic5_1.style.display="none";
+                        //$("#next").fadeIn();
+                        //$("#back").fadeIn();
+                        //$("#text2").fadeIn();
+                        //$("#pic2").fadeIn();
+                        document.getElementById('next').style.display='block';
+                        document.getElementById('back').style.display='block';
+                        document.getElementById('text2').style.display='block';
+                        document.getElementById('pic2').style.display='block';
+                        break;
+                    case 3:
+                        text1.style.display="none";
+                        text2.style.display="none";
+                        pic2.style.display="none";
+                        text4.style.display="none";
+                        pic4.style.display="none";
+                        text5_1.style.display="none";
+                        text5_2.style.display="none";
+                        text5_3.style.display="none";
+                        pic5_1.style.display="none";
+                        document.getElementById('next').style.display='block';
+                        document.getElementById('back').style.display='block';
+                        document.getElementById('text3').style.display='block';
+                        document.getElementById('pic3').style.display='block';
+                        break;
+                    case 4:
+                        text1.style.display="none";
+                        text2.style.display="none";
+                        pic2.style.display="none";
+                        text3.style.display="none";
+                        pic3.style.display="none";
+                        text5_1.style.display="none";
+                        text5_2.style.display="none";
+                        text5_3.style.display="none";
+                        pic5_1.style.display="none";
+                        document.getElementById('next').style.display='block';
+                        document.getElementById('back').style.display='block';
+                        document.getElementById('text4').style.display='block';
+                        document.getElementById('pic4').style.display='block';
+                        break;
+                    case 5:
+                        next.style.display="none";
+                        text1.style.display="none";
+                        text2.style.display="none";
+                        pic2.style.display="none";
+                        text3.style.display="none";
+                        pic3.style.display="none";
+                        text4.style.display="none";
+                        pic4.style.display="none";
+                        document.getElementById('back').style.display='block';
+                        document.getElementById('text5_1').style.display='block';
+                        document.getElementById('text5_2').style.display='block';
+                        document.getElementById('text5_3').style.display='block';
+                        document.getElementById('pic5_1').style.display='block';
+                        break;
+                    default:
+                        back.style.display="none";
+                        text2.style.display="none";
+                        pic2.style.display="none";
+                        text3.style.display="none";
+                        pic3.style.display="none";
+                        text4.style.display="none";
+                        pic4.style.display="none";
+                        text5_1.style.display="none";
+                        text5_2.style.display="none";
+                        text5_3.style.display="none";
+                        pic5_1.style.display="none";
+                        document.getElementById('next').style.display='block';
+                        document.getElementById('text1').style.display='block';
+
+                       
+                }    
+            }
+
+            function NextPage()
+            {
+                if(count<5)
+                    count++;
+                ChangeBack(count);
+                ChangePage(count);
+                
+            }
+
+            function BackPage()
+            {
+                if(count>1)
+                    count--;
+                ChangeBack(count);
+                ChangePage(count);
+               
+            }
+            
+            function pic5_2show()
+            {
+                document.getElementById('pic5_2').style.display='block';
+            }
+
+             function pic5_2disa()
+            {
+                pic5_2.style.display="none";
+            }
+            
+            function pic5_3show()
+            {
+                document.getElementById('pic5_3').style.display='block';
+            }
+
+             function pic5_3disa()
+            {
+                pic5_3.style.display="none";
+            }
+
+            function gamefinal()
+            {
+                back.style.display="none"; 
+                text5_1.style.display="none";
+                text5_2.style.display="none";
+                text5_3.style.display="none";
+                pic5_1.style.display="none";
+                document.getElementById('gamefinal_text1').style.display='block';
+                document.getElementById('gamefinal_text2').style.display='block';
+                document.getElementById('gamefinal_text3').style.display='block';
+                document.getElementById('gamefinal_pic1').style.display='block';
+            }
+            
+            function gameover()
+            {
+                back.style.display="none"; 
+                text5_1.style.display="none";
+                text5_2.style.display="none";
+                text5_3.style.display="none";
+                pic5_1.style.display="none";
+                document.getElementById('gameover_text1').style.display='block';
+                document.getElementById('gameover_text2').style.display='block';
+                document.getElementById('gameover_text3').style.display='block';
+                document.getElementById('gameover_pic1').style.display='block';
+            }
+
+            function end()
+            {
+                back.style.display="none";
+                gamefinal_text1.style.display="none";
+                gamefinal_text2.style.display="none";
+                gamefinal_text3.style.display="none";
+                document.getElementById('end_text1').style.display='block';
+            }
+
+            function tryagain()
+            {
+                gameover_text1.style.display="none";
+                gameover_text2.style.display="none";
+                gameover_text3.style.display="none";
+                gameover_pic1.style.display="none";
+                document.getElementById('back').style.display='block';
+                document.getElementById('text5_1').style.display='block';
+                document.getElementById('text5_2').style.display='block';
+                document.getElementById('text5_3').style.display='block';
+                document.getElementById('pic5_1').style.display='block';
+            }
+
+            
+        </script>
+    </body>
+</html>
